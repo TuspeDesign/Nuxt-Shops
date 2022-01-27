@@ -7,6 +7,9 @@
 				Tervetuloa sivulle. Täältä voit etsiä suomalaisia verkkokauppoja<br>sekä niiden paikkakuntia.
 			</div>
 
+	  <input class="mt-20 w-96 bg-gray-200 text-gray-700 border border-gray-700 rounded-2xl py-3 px-4 leading-tight focus:outline-none focus:bg-white" type="text" v-model="search" placeholder="Etsi verkkokauppoja">
+	  <div v-for="store in filteredStores" :key="store.id"/>
+
       <ProductList 
         v-if="featured" 
         :items="featured" 
@@ -28,11 +31,18 @@
 		data() {
 			return {
 				featured: null,
+				stores: [],
+				search: '',
 			};
 		},
 		computed: {
 			site: function () {
 				return this.$store.getters["site"];
+			},
+			filteredStores: function(){
+				return this.stores.filter((store) => {
+					return store.title.match(this.search);
+				});
 			},
 		},
 		methods: {

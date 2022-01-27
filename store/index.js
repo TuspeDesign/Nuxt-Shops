@@ -2,7 +2,7 @@ export const strict = false
 
 export let postData = async function (query = "", data = null, method = "GET", contentType = "application/json", token = null) {
 	if (method == "GET" && data) method = "POST";
-	const result = await fetch(`https://aeki.puoti.dev/${query}`, {
+	const result = await fetch(`https://shops.puoti.dev/${query}`, {
 		method: method,
 		headers: {
 			"Content-Type": contentType,
@@ -20,9 +20,9 @@ export let postData = async function (query = "", data = null, method = "GET", c
 
 export const state = () => ({
 	site: {
-		name: "AEKI",
+		name: "",
 		description: "",
-		image: "/images/noImg.jpg"
+		image: ""
 	},
 	user: {},
 	categories: null,
