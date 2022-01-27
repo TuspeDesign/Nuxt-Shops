@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Header/>
         <main
             id="content"
             class="flex flex-col mx-auto"
@@ -12,10 +13,12 @@
 
 <script>
     import { postData } from "@/store";
+    import Header from "@/components/header";
     import Footer from "@/components/footer";
 
     export default {
         components: {
+            Header,
             Footer,
         },
         computed: {

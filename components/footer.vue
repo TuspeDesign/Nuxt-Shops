@@ -1,7 +1,7 @@
 <template>
-    <footer class="py-10 bg-gray-300">
+    <footer class="py-10 mt-10 bg-gray-300 text-gray-900">
         <div class="text-center">
-            <h2 class="text-xl font-bold"><a class="hover:underline" href="https://tuspe.com/">Tuspe Design</a></h2>
+            <h2 class="mb-2 text-xl font-bold "><a class="hover:underline" href="https://tuspe.com/">Tuspe Design</a></h2>
             <a class="hover:underline" href="tel:+358407746121">040 774 6121</a><br>
             <a class="hover:underline" href="mailto:info@tuspe.com">info@tuspe.com</a>
         </div>

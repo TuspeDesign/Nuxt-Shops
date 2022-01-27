@@ -1,14 +1,11 @@
 <template>
   <div class="mb-60">
     <div class="container mx-auto text-center">
-      <h1 class="mt-72 text-6xl font-extrabold">ETUSIVU</h1>
+      <h1 class="mt-40 text-6xl font-extrabold">ETUSIVU</h1>
 
-      <div class="mt-5 text-xl leading-tight">
-				Tervetuloa sivulle. Täältä voit etsiä suomalaisia verkkokauppoja<br>sekä niiden paikkakuntia.
-			</div>
-
-	  <input class="mt-20 w-96 bg-gray-200 text-gray-700 border border-gray-700 rounded-2xl py-3 px-4 leading-tight focus:outline-none focus:bg-white" type="text" v-model="search" placeholder="Etsi verkkokauppoja">
-	  <div v-for="store in filteredStores" :key="store.id"/>
+		<div class="mt-5 text-xl leading-tight">
+			Tervetuloa sivulle. Täältä voit etsiä suomalaisia verkkokauppoja<br>sekä niiden paikkakuntia.
+		</div>
 
       <ProductList 
         v-if="featured" 
@@ -32,17 +29,11 @@
 			return {
 				featured: null,
 				stores: [],
-				search: '',
 			};
 		},
 		computed: {
 			site: function () {
 				return this.$store.getters["site"];
-			},
-			filteredStores: function(){
-				return this.stores.filter((store) => {
-					return store.title.match(this.search);
-				});
 			},
 		},
 		methods: {
