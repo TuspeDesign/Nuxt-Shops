@@ -55,7 +55,7 @@
 		},
 		async fetch() {
 			const id = await this.$route.params.product;
-			const temp = await postData("stores/" + parseInt(id));
+			const temp = await postData("companies/" + parseInt(id));
 			if (temp && temp.id) this.page = temp;
 		},
 		head() {

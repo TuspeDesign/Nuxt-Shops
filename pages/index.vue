@@ -4,7 +4,7 @@
       <h1 class="mt-40 text-6xl font-extrabold">ETUSIVU</h1>
 
 		<div class="mt-5 text-xl leading-tight">
-			Tervetuloa sivulle. Täältä voit etsiä suomalaisia verkkokauppoja<br>sekä niiden paikkakuntia.
+			Tervetuloa sivulle. Täältä voit etsiä suomalaisia verkkokauppoja,<br>niiden paikkakuntia ja paljon muuta.
 		</div>
 
       <ProductList 
