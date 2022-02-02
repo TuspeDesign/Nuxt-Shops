@@ -1,17 +1,14 @@
 <template>
 	<div v-if="page" :id="page.template">
 		<h1 class="mt-0 mb-10 text-center text-5xl">{{ page.title }}</h1>
-		<ProductList v-if="page.items" :items="page.items" />
+		<Companies v-if="page.items" :items="page.items" />
 	</div>
 </template>
 
 <script>
 	import { postData } from "@/store";
-	import ProductList from "@/components/productList";
+
 	export default {
-		components: {
-			ProductList,
-		},
 		data() {
 			return {
 				page: null,

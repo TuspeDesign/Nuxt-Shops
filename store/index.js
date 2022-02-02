@@ -2,6 +2,7 @@ export const strict = false
 
 export let postData = async function (query = "", data = null, method = "GET", contentType = "application/json", token = null) {
 	if (method == "GET" && data) method = "POST";
+	console.log(`https://shops.puoti.dev/${query}`);
 	const result = await fetch(`https://shops.puoti.dev/${query}`, {
 		method: method,
 		headers: {
@@ -11,8 +12,7 @@ export let postData = async function (query = "", data = null, method = "GET", c
 		...(data ? { body: data } : undefined),
 	})
 	try {
-		const json = await result.json()
-		return json
+		return await result.json()
 	} catch (err) {
 		return result.status
 	}
